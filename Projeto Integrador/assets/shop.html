@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/shop.css" rel="stylesheet" type="text/css">
+    <link href="../css/darkMode.css" rel="stylesheet" type="text/css">
+    <link href="../css/lightMode.css" rel="stylesheet" type="text/css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Loja - Joelly Pet</title>
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="header">
+		
+		<!-- NAV -->
+		<div class="nav container">
+			
+			<!-- LOGO -->
+			<div class="task-bar">
+				<a href="../index.html"><img class="logo" src="../images/logo-verdin-d.png"></a>    
+			</div>
+
+			<!-- LIST LINKS -->
+		  	<ul class="nav list-links">
+
+				<!-- DARK-LIGHT MODE -->
+				<li>					
+					<button id="mode-switch">
+						<i id="change-class" class='bx bx-toggle-left' ></i>
+					</button>					
+				</li>
+				<!-- SHOP LINK -->
+				<li>
+			  		<a href="shop.html?#" class="link">Loja</a>
+				</li>
+
+				<!-- ADOTE LINK -->
+				<li>					
+			  		<a href="#" class="link">Adote</a>
+				</li>
+
+				<!-- SOBRE LINK -->
+				<li>					
+			  		<a href="#" class="link">Sobre</a>
+				</li>
+
+				<!-- SEARCH PRODUCTS -->
+				<li id="search-container">
+					<form action="#">
+							<button type="submit" id="search"><i class='bx bx-search'></i></button>
+							<input type="search" id="search-input" placeholder="Digite o nome do produto aqui..."/>
+					</form>
+				</li>
+
+			  	<!-- SHOPPING BAG -->	
+				<li> <!-- BAG ICON -->	
+					<button type="button" id="shopping-bag">
+						<i class='bx bx-shopping-bag' ></i>
+					</button>
+
+					<!-- BAG -->
+					<div class="bag">
+						<h2 class="bag-title">Seu Carrinho</h2>
+
+						<!-- CONTENT -->
+						<div class="bag-content">
+						</div>
+
+						<!-- TOTAL -->
+						<div class="total">
+							<div class="total-title">Total:</div>
+							<div class="total-price">R$ 0</div>
+						</div>
+
+						<!-- BUY BUTTON -->
+						<button type="button" class="btn-buy">Finalizar Compra</button>
+
+						<!-- BAG CLOSE -->
+						<i class='bx bx-x' id="bag-close"></i>
+					</div>
+				</li>
+			
+				<!-- ACCOUNT -->
+				<li class="account">
+					<button type="button" id="account" onclick="user()">
+						<i id="user-icon" class='bx bx-user'></i>
+					</button>
+				</li>
+				
+		  	</ul>
+		</div>
+	</header>
+
+	<section class="shop container wrapper">
+
+		<h2 class="section-title">Produtos</h2>
+		
+
+			<!-- FILTER PRODUCTS -->
+			<div id="buttons">
+				<button class="button-value" onclick="filterProduct('all')">Todos</button>
+				<button class="button-value" onclick="filterProduct('Pelúcias')">Pelúcias</button>
+				<button class="button-value" onclick="filterProduct('Bolinhas')">Bolinhas</button>
+				<button class="button-value" onclick="filterProduct('Frisbees')">Frisbees</button>
+				<button class="button-value" onclick="filterProduct('Halteres')">Halteres</button>
+			</div>
+
+			<!-- PRODUCTS CONTENT -->
+			<div id="products"></div>
+		
+	</section>
+
+	<!-- LOADING SCREEN -->
+	<div onload="" id="loading-screen">
+		<div id="loading-screen" class="hidden">
+		<div class="spinner"></div>
+		</div>
+	</div>
+    
+  	<script src="../js/shop.js"></script>
+	<script src="../js/shopBagConfig.js"></script>
+</body>
+</html>

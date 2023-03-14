@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+    <link href="../css/darkMode.css" rel="stylesheet" type="text/css">
+    <link href="../css/lightMode.css" rel="stylesheet" type="text/css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Loja - Joelly Pet</title>
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="header">
+
+		<!-- LOGO -->
+		<div class="task-bar">
+			<a href="../index.html"><img class="logo" src="../images/logo-verdin-d.png"></a>    
+		</div>
+
+		<!-- NAV -->
+		<div class="links">
+			
+			<div>
+				<!-- DARK-LIGHT MODE -->
+				<button id="mode-switch">
+					<i id="changeClass" class='bx bx-toggle-left' ></i>
+				</button>
+			</div>
+
+			<!-- LIST LINKS -->
+		  	<ul id="searchResults" class="list-links">
+				
+				<li>
+					<!-- SHOP LINK -->
+			  		<a href="shop.html?#" class="link">Loja</a>
+				</li>
+				<li>
+					<!-- ADOTE LINK -->
+			  		<a href="#" class="link">Adote</a>
+				</li>
+				<li>
+					<!-- SOBRE LINK -->
+			  		<a href="#" class="link">Sobre</a>
+				</li>
+			</ul>
+
+			<!-- OTHER-LINKS -->
+		 	<ul class="other-links">
+				<div >
+				
+					<!-- SEARCH PRODUCTS -->
+					<form action="#">
+						<div id="search-container" class="bar">
+							<button type="submit" id="search"><i class='bx bx-search'></i></button>
+							<input type="search" id="search-input" placeholder="Digite o nome do produto aqui..."/>
+						</div>
+					</form>
+			  		
+				</div>
+				<div>
+					<li>
+						<!-- SHOPPING BAG -->
+				  		<button type="button" id="shopping-bag" onclick='shoppingBag()'>
+							<i class='bx bx-shopping-bag' ></i>
+						</button>
+					</li>
+			  	</div>
+				<div>
+					<!-- ACCOUNT -->
+					<li class="account">
+			  			<button type="button" class="account" onclick="user()">
+							<i id="user-icon" class='bx bx-user'></i>
+			  			</button>
+					</li>
+				</div>
+		  </ul>
+		</div>
+	</header>
+<div class='container'>
+    <div class='card'>
+      <h1> Entrar </h1>
+      
+      <div id='msgError'></div>
+      
+      <div class='label-float'>
+        <input type='text' id='email' paceholder='' required>
+        <label id='emailLabel' for='email'>E-mail</label>
+      </div>
+      
+      <div class='label-float'>
+        <input type='password' id='senha' paceholder='' required>
+        <label id='senhaLabel' for='senha'>Senha</label>
+        <i class="fa fa-eye" aria-hidden="true"></i>
+      </div>
+      
+      <div class='justify-center'>
+        <button onclick='entrar()'>Entrar</button>
+      </div>
+      
+      <div class='justify-center'>
+        <hr id="hr" color="#1e8d90">
+      </div>
+      
+      <p> Não tem uma conta?
+        <a href='signin.html'> Cadastre-se </a>
+      </p>
+      
+    </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
